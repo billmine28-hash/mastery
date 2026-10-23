@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bill Mineweaser | I Swing Mastery</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#050a24;--gold:#d9ac3a;--gold-light:#f0cf72;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--navy);color:#e6e9f7;overflow-x:hidden}
+  .banner{background:linear-gradient(180deg,#e9bf4c,#cf9f26);color:#14120a;text-align:center;font-weight:600;padding:12px 16px;font-size:14px;letter-spacing:.2px}
+  .hero{position:relative;min-height:calc(100vh - 44px);min-height:calc(100svh - 44px);overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:44px 28px 40px;
+    background:
+      radial-gradient(ellipse 80% 50% at 80% 25%,rgba(90,120,230,.30),transparent 70%),
+      linear-gradient(180deg,#0b1544 0%,#060c2e 55%,#030719 100%);}
+  .art{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  .top,.bottom{position:relative;z-index:3;max-width:520px;width:100%;margin:0 auto}
+  .eyebrow{display:flex;align-items:center;gap:12px;color:var(--gold);font-weight:600;letter-spacing:.26em;font-size:12px;text-transform:uppercase;margin-bottom:20px}
+  .eyebrow i{display:block;width:32px;height:2px;background:var(--gold)}
+  h1{font-family:'Lora',serif;font-weight:700;font-size:clamp(46px,13.5vw,80px);line-height:1.04;color:#fff;letter-spacing:-.01em}
+  h1 .g{display:block;margin-top:6px;font-weight:600;font-size:.62em;color:var(--gold-light)}
+  .rule{width:64px;height:3px;background:linear-gradient(90deg,var(--gold),transparent);margin:22px 0 18px;border-radius:2px}
+  .sub{font-size:18px;line-height:1.5;color:#c4cae8;max-width:290px;font-weight:400}
+  .sub b{color:#fff;font-weight:600}
+  .btn{display:block;text-align:center;text-decoration:none;font-weight:600;font-size:17px;padding:18px 24px;border-radius:10px;margin-top:12px;letter-spacing:.2px;transition:transform .15s,box-shadow .15s}
+  .btn:active{transform:scale(.985)}
+  .gold{background:linear-gradient(180deg,#efcb62,#cf9f26);color:#14120a;box-shadow:0 6px 20px rgba(217,172,58,.28)}
+  .outline{border:1.5px solid rgba(217,172,58,.85);color:var(--gold-light);background:rgba(5,10,36,.55)}
+  .foot{margin-top:22px;text-align:center;color:#7d87ba;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<div class="banner">Original Black Mastery bats are on pre-sale &mdash; ask me about it</div>
+<section class="hero">
+  <svg class="art" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="barrel" x1="0" x2="1">
+        <stop offset="0" stop-color="#05060d"/><stop offset=".4" stop-color="#262b46"/><stop offset=".55" stop-color="#3b4268"/><stop offset=".75" stop-color="#12152a"/><stop offset="1" stop-color="#05060d"/>
+      </linearGradient>
+      <linearGradient id="handle" x1="0" x2="1"><stop offset="0" stop-color="#0a0b14"/><stop offset=".5" stop-color="#2a2e47"/><stop offset="1" stop-color="#0a0b14"/></linearGradient>
+      <linearGradient id="goldg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f0cf72"/><stop offset="1" stop-color="#b8861a"/></linearGradient>
+      <linearGradient id="trail" x1="0" x2="1"><stop offset="0" stop-color="#e9bf4c" stop-opacity="0"/><stop offset="1" stop-color="#e9bf4c" stop-opacity=".7"/></linearGradient>
+      <radialGradient id="flash"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".3" stop-color="#f0cf72" stop-opacity=".45"/><stop offset="1" stop-color="#e9bf4c" stop-opacity="0"/></radialGradient>
+      <filter id="blur8"><feGaussianBlur stdDeviation="8"/></filter>
+    </defs>
+
+    <!-- soft light cone -->
+    <path d="M400 0 L120 800 L400 800 Z" fill="#fff" opacity=".035"/>
+
+    <!-- subtle lightning, left edge only -->
+    <g fill="none" stroke="#f0cf72" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" opacity=".55">
+      <path d="M30 0 L14 130 L38 140 L6 280 L26 288 L0 400"/>
+    </g>
+
+    <!-- swing trail -->
+    <g fill="none" stroke-linecap="round">
+      <path d="M50 770 Q 160 440 330 310" stroke="url(#trail)" stroke-width="22" opacity=".35" filter="url(#blur8)"/>
+      <path d="M64 776 Q 172 452 340 322" stroke="url(#trail)" stroke-width="3"/>
+    </g>
+
+    <!-- bat -->
+    <g transform="translate(150 700) rotate(52)">
+      <ellipse cx="0" cy="70" rx="16" ry="10" fill="#0c0d18" stroke="url(#goldg)" stroke-width="1.6"/>
+      <rect x="-8" y="-120" width="16" height="190" rx="5" fill="url(#handle)"/>
+      <g stroke="url(#goldg)" stroke-width="1.8" opacity=".9">
+        <line x1="-8" y1="-18" x2="8" y2="-12"/><line x1="-8" y1="0" x2="8" y2="6"/><line x1="-8" y1="18" x2="8" y2="24"/><line x1="-8" y1="36" x2="8" y2="42"/>
+      </g>
+      <path d="M-8 -120 L-24 -190 L24 -190 L8 -120 Z" fill="url(#barrel)"/>
+      <rect x="-24" y="-410" width="48" height="222" rx="24" fill="url(#barrel)"/>
+      <rect x="-24" y="-196" width="48" height="4" fill="url(#goldg)"/>
+      <rect x="-24" y="-384" width="48" height="3" fill="url(#goldg)" opacity=".8"/>
+      <text x="0" y="-298" fill="url(#goldg)" font-family="Inter,sans-serif" font-weight="800" font-size="14" letter-spacing="4" text-anchor="middle" transform="rotate(-90 0 -298)">MASTERY</text>
+      <rect x="-12" y="-398" width="4" height="196" rx="2" fill="#fff" opacity=".22"/>
+    </g>
+
+    <!-- ball with soft glow -->
+    <circle cx="338" cy="312" r="62" fill="url(#flash)"/>
+    <circle cx="338" cy="312" r="26" fill="#f8f5ea"/>
+    <path d="M318 299 Q 329 312 318 326 M358 297 Q 347 312 358 327" fill="none" stroke="#c43a3a" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+
+  <div class="top">
+    <div class="eyebrow"><i></i>MD Classics 55s</div>
+    <h1>Bill<br>Mineweaser<span class="g">I swing Mastery.</span></h1>
+    <div class="rule"></div>
+    <p class="sub">Senior slowpitch, 42+ years in the game.</p>
+  </div>
+
+  <div class="bottom">
+    <a class="btn gold" href="https://www.masterysports.com/store">Shop Mastery</a>
+    <a class="btn outline" href="https://www.youtube.com/@MichaelHamilton5523">Mike Hamilton's YouTube Channel</a>
+    <div class="foot">Senior Slowpitch &middot; Mastery</div>
+  </div>
+</section>
+</body>
+</html>
